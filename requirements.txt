@@ -1,0 +1,7 @@
+numpy>=1.19.0
+matplotlib>=3.3.0
+scipy>=1.5.0
+Pillow>=8.0.0
+moviepy>=1.0.3
+yt-dlp>=2025.6.9
+ffmpeg-python>=0.2.0

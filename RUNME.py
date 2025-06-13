@@ -13,7 +13,7 @@ import time
 # Ensure parent directory is on sys.path so relative imports work
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from audioVisualization.consoleMain import consoleMain as run_consoleMain # type: ignore
+from audioVisualizerApp.consoleMain import consoleMain as run_consoleMain # type: ignore
 from config import sanitize_filename
 import visualization
 

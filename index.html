@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audiovisualizer 🎧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0c0c0c;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+        header {
+            background: #1a1a1a;
+            padding: 2rem;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        p {
+            max-width: 700px;
+            margin: 1rem auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .content {
+            padding: 2rem;
+            text-align: center;
+        }
+        .button {
+            background: #28a745;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+        img.demo {
+            max-width: 90%;
+            border: 1px solid #555;
+            border-radius: 6px;
+            margin: 1rem auto;
+        }
+        footer {
+            margin: 3rem 0 1rem;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Audiovisualizer</h1>
+        <p>🎵 Transform music into light — generate visuals from albums or YouTube links based on sound frequencies</p>
+        <a class="button" href="https://github.com/camnoval/audiovisualizer/releases/latest" target="_blank">⬇️ Download App</a>
+    </header>
+
+    <!-- Ad Section -->
+    <div class="content">
+        <p>💡 Support this project by checking out the ad below:</p>
+        <ins class="adsbygoogle"
+            style="display:block; text-align:center;"
+            data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+            data-ad-slot="yyyyyyyyyy"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"
+         crossorigin="anonymous"></script>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- Demo Section -->
+    <div class="content">
+        <h2>🔬 How It Works</h2>
+        <p>
+            Frequencies between 20–20,000 Hz are mapped to 400–700 nm wavelengths via a logarithmic scale:
+            <br>
+            <code>λ(f) = 700 - ((log₁₀(f) - log₁₀(20)) / (log₁₀(20000) - log₁₀(20))) × 300</code>
+        </p>
+        <img class="demo" src="demo/screenshot.png" alt="Audiovisualization Example">
+        <p>Each image is a unique portrait of the album’s sound profile — no two are alike!</p>
+    </div>
+
+    <footer>
+        Created by <a href="https://github.com/camnoval" style="color: #bbb;">@camnoval</a> — MIT Licensed
+    </footer>
+</body>
+</html>

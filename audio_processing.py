@@ -2,9 +2,10 @@ import numpy as np
 from scipy.io import wavfile
 from scipy import signal
 
-def process_audio(file_path, segment_duration=0.05):
+def process_audio(file_path, num_segments=1000):
     """
-    Process audio from a local .wav file and convert dominant frequencies to RGB colors
+    Process entire audio by dividing it into exactly `num_segments` equal parts
+    and convert dominant frequencies to RGB colors.
     """
     try:
         print(f"Reading audio file: {file_path}")
@@ -20,14 +21,19 @@ def process_audio(file_path, segment_duration=0.05):
             max_val = np.iinfo(np.int16).max if audio_data.max() > 1.0 else 1.0
             audio_data = audio_data / max_val
 
-        segment_samples = int(segment_duration * sample_rate)
-        num_segments = min(1000, len(audio_data) // segment_samples)
+        total_length = len(audio_data)
+        segment_samples = total_length // num_segments
+        print(f"Splitting into {num_segments} segments of ~{segment_samples} samples each")
 
-        print(f"Analyzing {num_segments} segments...")
         colors = []
-
         for i in range(num_segments):
-            segment = audio_data[i * segment_samples:(i + 1) * segment_samples]
+            start = i * segment_samples
+            end = (i + 1) * segment_samples if i < num_segments - 1 else total_length
+            segment = audio_data[start:end]
+
+            if len(segment) < 2:
+                continue  # skip tiny leftover segments
+
             segment = segment * signal.windows.hann(len(segment))
             fft_data = np.abs(np.fft.rfft(segment))
             freq_bins = np.fft.rfftfreq(len(segment), 1 / sample_rate)

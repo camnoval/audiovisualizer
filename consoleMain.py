@@ -102,7 +102,7 @@ def consoleMain():
                 song_title = track['title']
 
             print("[DEBUG] Starting audio analysis...")
-            colors = audio_processing.process_audio(audio_file, segment_duration=0.05)
+            colors = audio_processing.process_audio(audio_file, num_segments=1000)
             print(f"[DEBUG] Generated {len(colors)} colors")
 
             base_gradient = visualization.create_gradient_image(colors, height=200, target_width=1000)

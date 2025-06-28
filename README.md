@@ -105,12 +105,6 @@ Pull requests are welcome! For major changes, please open an issue first.
 
 ---
 
-## 📜 License
-
-MIT License — see [`LICENSE`](LICENSE) for details.
-
----
-
 ## 🔗 Links
 
 - 🔗 [Project Website](https://camnoval.github.io/audiovisualizer/)

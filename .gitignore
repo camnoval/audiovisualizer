@@ -9,10 +9,6 @@ __pycache__/
 *.m4a
 *.flac
 
-# Generated images
-*.png
-*.jpg
-
 # Virtual environments
 venv/
 env/

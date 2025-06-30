@@ -53,11 +53,15 @@
       than to absolute differences. AlbumViz reflects this by converting the <strong>logarithm of frequency</strong> into visible color.
     </p>
     <p>Here’s the formula used:</p>
-    <pre><code>
-λ = 700 - 300 × (log₁₀(f) - log₁₀(20)) / (log₁₀(20000) - log₁₀(20))
-    </code></pre>
+    <!-- Load MathJax for LaTeX rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <p>
+      <span style="font-size:1.2em;">
+      $$\lambda = 700 - 300 \times \frac{\log_{10}(f) - \log_{10}(20)}{\log_{10}(20000) - \log_{10}(20)}$$
+      </span>
+    </p>
     <ul>
-      <li><code>λ</code>: Wavelength in nanometers (400–700 nm)</li>
+      <li><code>\(\lambda\)</code>: Wavelength in nanometers (400–700 nm)</li>
       <li><code>f</code>: Frequency in Hz (20–20,000 Hz)</li>
     </ul>
 

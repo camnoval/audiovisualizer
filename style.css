@@ -1,4 +1,4 @@
-
+/* General page styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #0d1117;
@@ -6,72 +6,73 @@ body {
   margin: 0;
 }
 
+/* Header styling */
 header {
   background: #161b22;
   padding: 1rem 2rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping on desktop */
 }
 
+/* Logo styles */
 header h1 {
   margin: 0;
-  font-size: 1.5rem;
   color: #58a6ff;
-  flex: 1 0 100%;
+  white-space: nowrap; /* Keep logo on one line */
 }
 
+/* Navigation styles */
 nav {
-  flex: 1 0 100%;
-  margin-top: 0.5rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem; /* Space between links */
+  flex-wrap: nowrap; /* Keep nav links on one line */
 }
 
 nav a {
   color: #58a6ff;
   text-decoration: none;
   font-weight: bold;
-  background: #21262d;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
-  flex: 1 1 auto;
-  text-align: center;
+  white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
+nav a:hover,
+nav a:focus {
+  color: #1f6feb; /* Slightly lighter on hover/focus */
+}
+
+/* Container for page content */
 .container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem 1rem;
+  max-width: 1000px; /* Wider max-width on desktop */
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
-img, pre {
-  max-width: 100%;
-  height: auto;
-  overflow-x: auto;
-  word-wrap: break-word;
-  border-radius: 6px;
-}
-
-pre {
-  background: #161b22;
-  padding: 1rem;
-  border-left: 4px solid #58a6ff;
-}
-
-@media (min-width: 600px) {
-  header h1 {
-    flex: 0;
+/* Mobile styles */
+@media (max-width: 600px) {
+  /* Allow header to wrap */
+  header {
+    flex-wrap: wrap;
+    padding: 1rem 1rem;
   }
 
+  /* Stack nav links vertically */
   nav {
-    flex: 0;
-    justify-content: flex-end;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%; /* full width nav */
   }
 
   nav a {
-    flex: none;
+    display: block;
+    margin: 0;
+  }
+
+  /* Smaller padding on container */
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
   }
 }

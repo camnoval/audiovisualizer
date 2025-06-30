@@ -8,7 +8,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Audiovisualizer</title>
+  <title>AlbumViz — Audio Visualizer</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7804559500348841"
      crossorigin="anonymous"></script>
   <style>
@@ -17,14 +17,24 @@
       background: #0d1117;
       color: #c9d1d9;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
     }
-    h1 {
+    header {
+      background: #161b22;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
       color: #58a6ff;
     }
-    a {
+    nav a {
+      margin-left: 1rem;
       color: #58a6ff;
       text-decoration: none;
+      font-weight: bold;
     }
     .container {
       max-width: 800px;
@@ -55,22 +65,54 @@
       border-left: 4px solid #58a6ff;
       overflow-x: auto;
     }
+    h2 {
+      margin-top: 2rem;
+    }
   </style>
-  
 </head>
 <body>
+
+  <header>
+    <h1>🎧 AlbumViz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="examples.html">Examples</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
   <div class="container">
-    <h1>🎧 Audiovisualizer</h1>
+
+    <p><strong>See your music. Hear your light.</strong></p>
     <p>
-      This app transforms music into color using audio frequency analysis. It splits any .wav file into 1000 equal parts, detects the dominant frequency in each, maps that to a visible color (based on human perception), and generates a beautiful RGB-based visual representation of the sound.
+      <strong>AlbumViz</strong> is an interactive tool that transforms sound into color using real audio data and scientific mapping.
+      Whether you enter an album name or a YouTube music video, AlbumViz analyzes the full frequency spectrum of the audio — 
+      from sub-bass at 20 Hz to piercing highs at 20,000 Hz — and converts it into visible light wavelengths between 
+      400 nm (violet) and 700 nm (red).
     </p>
+
+    <h2>🔬 How It Works</h2>
+    <p>
+      Our ears perceive sound <strong>logarithmically</strong>, meaning we’re more sensitive to <em>ratios</em> of frequencies 
+      than to absolute differences. AlbumViz reflects this by converting the <strong>logarithm of frequency</strong> into visible color.
+    </p>
+    <p>Here’s the formula used:</p>
+    <pre><code>
+λ = 700 - 300 × (log₁₀(f) - log₁₀(20)) / (log₁₀(20000) - log₁₀(20))
+    </code></pre>
+    <ul>
+      <li><code>λ</code>: Wavelength in nanometers (400–700 nm)</li>
+      <li><code>f</code>: Frequency in Hz (20–20,000 Hz)</li>
+    </ul>
 
     <h2>🛠 Features</h2>
     <ul>
-      <li>Analyzes any music video/playlist on youtube</li>
-      <li>Maps dominant frequency to RGB color using logarithmic scaling</li>
-      <li>Renders a color strip representing the audio's spectrum</li>
-      <li>No data collection — fully offline</li>
+      <li>Analyzes any music video/playlist on YouTube</li>
+      <li>Maps dominant frequency to visible light color using logarithmic scaling</li>
+      <li>Renders a colorful strip that visualizes the entire song</li>
+      <li>No data collection — fully offline capable</li>
     </ul>
 
     <h2>📦 Download</h2>
@@ -89,23 +131,23 @@
     <pre><code>1. Clone or download this repo
 2. Make sure Python and dependencies are installed
 3. Run: python RUNME.py
-4. Type in an album, playlist, or a youtube URL
+4. Type in an album, playlist, or a YouTube URL
     - Example: "Dark Side of the Moon by Pink Floyd"
-    - Or a YouTube playlist URL
-    - Or a YouTube video URL (Ideally full album length video)
-5. Customize background colors or have it auto-generate based on the album cover
-6. Check and save the output .png file!</code></pre>
+    - Or a YouTube playlist or album-length video
+5. Visualize and save the output .png file!</code></pre>
 
-    <h2>🖼 Demo </h2>
+    <h2>🖼 Demo</h2>
     <img class="screenshot" src="demo/screenshot.png" alt="Visualization screenshot">
 
-    <h2>Results </h2>
-    <img class="darkside" src="demo/darkSideOfTheMoon.png" alt="Darkside of the Moon by Pink Floyd Result">
-    <img class="RAM" src="demo/ram.png" alt="RAM by Daft Punk Result">
+    <h2>Results</h2>
+    <img class="screenshot" src="demo/darkSideOfTheMoon.png" alt="Dark Side of the Moon by Pink Floyd Result">
+    <img class="screenshot" src="demo/ram.png" alt="RAM by Daft Punk Result">
+
     <h2>🔒 Privacy</h2>
     <p>
       This tool runs completely offline. It does not collect, transmit, or store any data.
     </p>
+
   </div>
 </body>
 </html>

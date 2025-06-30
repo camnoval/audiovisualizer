@@ -12,76 +12,6 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7804559500348841"
      crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
-  <!-- <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #161b22;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      color: #58a6ff;
-    }
-    nav a {
-      margin-left: 1rem;
-      color: #58a6ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #161b22;
-      padding: 2rem;
-      border-radius: 8px;
-    }
-    .btn {
-      display: inline-block;
-      background: #238636;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-top: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .screenshot {
-      max-width: 100%;
-      border-radius: 6px;
-      margin-top: 1.5rem;
-    }
-    pre {
-      background: #0d1117;
-      color: #c9d1d9;
-      padding: 1rem;
-      border-left: 4px solid #58a6ff;
-      overflow-x: auto;
-    }
-    h2 {
-      margin-top: 2rem;
-    }
-    @media (max-width: 600px) {
-      .container {
-        padding: 1rem;
-      }
-      pre {
-        font-size: 0.9rem;
-      }
-      nav a {
-        display: block;
-        margin: 0.3rem 0;
-      }
-    }
-  </style> -->
 </head>
 <body>
 
@@ -108,6 +38,17 @@
 
     <h2>🔬 How It Works</h2>
     <p>
+    </p>
+    <ol>
+      <li>Upload your song, playlist, album, or link from youtube.</li>
+      <li>The song is cut into 1000 segments (different songs are different lengths).</li>
+      <li>For each segment, the dominant frequency (between 20 Hz and 20,000 Hz) is detected.</li>
+      <li>This frequency is plugged into a logarithmic equation to get a wavelength between 400 nm (violet) and 700 nm (red).</li>
+      <li>Each wavelength is mapped to a specific color (e.g., 400 nm = violet, 700 nm = red).</li>
+      <li>All the colors are collected in order.</li>
+      <li>The result is a beautiful gradient that visually represents your music!</li>
+    </ol>
+    <p>
       Our ears perceive sound <strong>logarithmically</strong>, meaning we’re more sensitive to <em>ratios</em> of frequencies 
       than to absolute differences. AlbumViz reflects this by converting the <strong>logarithm of frequency</strong> into visible color.
     </p>
@@ -123,9 +64,12 @@
     <h2>🛠 Features</h2>
     <ul>
       <li>Analyzes any music video/playlist on YouTube</li>
+      <li>Splits audio into 1,000 pieces and finds the dominant frequency at each point</li>
       <li>Maps dominant frequency to visible light color using logarithmic scaling</li>
-      <li>Renders a colorful strip that visualizes the entire song</li>
+      <li>Renders a colorful strip that visualizes the entire song as a gradient</li>
       <li>No data collection — fully offline capable</li>
+      <li>Generates a .png file of the visualization that can be used as a poster</li>
+      <li>Perfect for gifts for music and science lovers alike</li>
     </ul>
 
     <h2>📦 Download</h2>
@@ -140,14 +84,19 @@
       </a>
     </p>
 
-    <h2>📝 How to Use</h2>
-    <pre><code>1. Clone or download this repo
-2. Make sure Python and dependencies are installed
-3. Run: python RUNME.py
-4. Type in an album, playlist, or a YouTube URL
-    - Example: "Dark Side of the Moon by Pink Floyd"
-    - Or a YouTube playlist or album-length video
-5. Visualize and save the output .png file!</code></pre>
+    <h2>📝 How to Use On Your Computer!</h2>
+    <ul>
+      <li>Clone or download this repo</li>
+      <li>Make sure Python and dependencies are installed</li>
+      <li>Run: python RUNME.py</li>
+      <li>Type in an album, playlist, or a YouTube URL
+        <ul>
+          <li>Example: "Dark Side of the Moon by Pink Floyd"</li>
+          <li>Or a YouTube playlist or album-length video</li>
+        </ul>
+      </li>
+      <li>Visualize and save the output .png file!</li>
+    </ul>
 
     <h2>🖼 Demo</h2>
     <p>Here’s what the user interface looks like:</p>

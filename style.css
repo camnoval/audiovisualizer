@@ -1,95 +1,116 @@
 /* General page styles */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #0d1117;
-  color: #c9d1d9;
-  margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
 }
 
 /* Header styling */
 header {
-  background: #161b22;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap; /* Prevent wrapping on desktop */
+    background: #161b22;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping on desktop */
 }
 
 /* Logo styles */
 header h1 {
-  margin: 0;
-  color: #58a6ff;
-  white-space: nowrap; /* Keep logo on one line */
+    margin: 0;
+    color: #58a6ff;
+    white-space: nowrap; /* Keep logo on one line */
 }
 
 /* Navigation styles */
 nav {
-  display: flex;
-  gap: 1rem; /* Space between links */
-  flex-wrap: nowrap; /* Keep nav links on one line */
+    display: flex;
+    gap: 1rem; /* Space between links */
+    flex-wrap: nowrap; /* Keep nav links on one line */
 }
 
 nav a {
-  color: #58a6ff;
-  text-decoration: none;
-  font-weight: bold;
-  white-space: nowrap;
-  transition: color 0.3s ease;
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
 }
 
 nav a:hover,
 nav a:focus {
-  color: #1f6feb; /* Slightly lighter on hover/focus */
+    color: #fff;
+    background: #1f6feb;
 }
 
 /* Container for page content */
 .container {
-  max-width: 1000px; /* Wider max-width on desktop */
-  margin: 2rem auto;
-  padding: 2rem;
+    max-width: 1000px; /* Wider max-width on desktop */
+    margin: 2rem auto;
+    padding: 2rem;
 }
 
 /* Mobile styles */
 @media (max-width: 600px) {
-  /* Allow header to wrap */
-  header {
-    flex-wrap: wrap;
-    padding: 1rem 1rem;
-  }
+    /* Allow header to wrap */
+    header {
+        flex-wrap: wrap;
+        padding: 1rem 1rem;
+    }
 
-  /* Stack nav links vertically */
-  nav {
-    flex-direction: column;
-    gap: 0.3rem;
-    width: 100%; /* full width nav */
-  }
+    /* Stack nav links vertically as big buttons */
+    nav {
+        flex-direction: column;
+        gap: 0.7rem;
+        width: 100%; /* full width nav */
+        align-items: stretch;
+        margin-top: 1rem;
+    }
 
-  nav a {
-    display: block;
-    margin: 0;
-  }
+    nav a {
+        display: block;
+        width: 100%;
+        background: #21262d;
+        color: #58a6ff;
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        margin: 0;
+        box-sizing: border-box;
+        border: 2px solid #30363d;
+        transition: background 0.2s, color 0.2s;
+    }
 
-  /* Smaller padding on container */
-  .container {
-    padding: 1rem;
-    margin: 1rem auto;
-  }
+    nav a:hover,
+    nav a:focus {
+        background: #1f6feb;
+        color: #fff;
+    }
+
+    /* Smaller padding on container */
+    .container {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
 }
 
 .btn {
-  display: inline-block;
-  background: #238636;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    background: #238636;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover,
 .btn:focus {
-  background: #2ea043;
+    background: #2ea043;
 }

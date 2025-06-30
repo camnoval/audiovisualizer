@@ -76,3 +76,20 @@ nav a:focus {
     margin: 1rem auto;
   }
 }
+
+.btn {
+  display: inline-block;
+  background: #238636;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #2ea043;
+}

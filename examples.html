@@ -6,37 +6,42 @@
   <title>AlbumViz - Examples</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
 
-    .grid-item {
-      background: #161b22;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-    }
+  .grid-item {
+    background: #161b22;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-    .grid-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      margin: 0.5rem 0;
-    }
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 0.5rem 0 1rem 0;
+  }
 
-    .grid-item h3 {
-      font-size: 1rem;
-      color: #58a6ff;
-      margin-bottom: 0.5rem;
-    }
+  .grid-item h3 {
+    font-size: 1rem;
+    color: #58a6ff;
+    margin-bottom: 0.5rem;
+  }
 
-    .grid-item p {
-      font-size: 0.9rem;
-      color: #c9d1d9;
-    }
+  .grid-item p {
+    font-size: 0.9rem;
+    color: #c9d1d9;
+    margin-top: auto; 
+  }
+
   </style>
 </head>
 <body>

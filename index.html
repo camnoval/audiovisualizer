@@ -25,6 +25,7 @@
       <a href="privacy.html">Privacy</a>
     </nav>
   </header>
+  
 
   <div class="container">
 
@@ -36,12 +37,24 @@
       400 nm (violet) and 700 nm (red).
     </p>
 
+    <h2>🎨 Why AlbumViz Matters</h2>
+    <p>
+      Music is more than just sound—it's an experience that can evoke powerful emotions, memories, and even visual imagery. AlbumViz bridges the gap between hearing and seeing by translating the unique frequency patterns of your favorite songs into vibrant color gradients. This process not only creates beautiful visual art but also provides a new way to understand and appreciate the structure of music.
+    </p>
+    <p>
+      For musicians, AlbumViz offers a fresh perspective on composition and arrangement, revealing the hidden architecture of sound. For educators, it serves as a valuable teaching tool to demonstrate the relationship between physics, math, and art. And for music lovers, it’s a fun and engaging way to explore the songs you love in a whole new light—literally!
+    </p>
+    <p>
+      Each visualization is unique, reflecting the dynamic range and complexity of the audio. From the deep, pulsing bass of electronic music to the soaring highs of a violin solo, AlbumViz captures it all and presents it as a continuous spectrum of color. This not only makes for stunning visuals but also helps you "see" the energy and emotion embedded in every track.
+    </p>
+
     <h2>🔬 How It Works</h2>
     <p>
+      AlbumViz uses advanced audio analysis techniques to break down your music into its core components. The process starts by dividing the audio into 1,000 segments, regardless of the song's length. For each segment, the dominant frequency is detected using digital signal processing algorithms. This frequency is then mapped to a specific wavelength of visible light using a logarithmic scale, ensuring that the full range of human hearing is represented proportionally in the color spectrum.
     </p>
     <ol>
-      <li>Upload your song, playlist, album, or link from youtube.</li>
-      <li>The song is cut into 1000 segments (different songs are different lengths).</li>
+      <li>Upload your song, playlist, album, or link from YouTube.</li>
+      <li>The song is cut into 1,000 segments (different songs are different lengths).</li>
       <li>For each segment, the dominant frequency (between 20 Hz and 20,000 Hz) is detected.</li>
       <li>This frequency is plugged into a logarithmic equation to get a wavelength between 400 nm (violet) and 700 nm (red).</li>
       <li>Each wavelength is mapped to a specific color (e.g., 400 nm = violet, 700 nm = red).</li>
@@ -51,6 +64,9 @@
     <p>
       Our ears perceive sound <strong>logarithmically</strong>, meaning we’re more sensitive to <em>ratios</em> of frequencies 
       than to absolute differences. AlbumViz reflects this by converting the <strong>logarithm of frequency</strong> into visible color.
+    </p>
+    <p>
+      This approach is grounded in both psychoacoustics and physics. The logarithmic mapping ensures that low and high frequencies are represented fairly, mimicking the way our ears naturally interpret sound. The result is a visualization that is both scientifically accurate and aesthetically pleasing.
     </p>
     <p>Here’s the formula used:</p>
     <!-- Load MathJax for LaTeX rendering -->
@@ -64,6 +80,9 @@
       <li><code>\(\lambda\)</code>: Wavelength in nanometers (400–700 nm)</li>
       <li><code>f</code>: Frequency in Hz (20–20,000 Hz)</li>
     </ul>
+    <p>
+      By applying this formula, AlbumViz ensures that every nuance in your music is captured and translated into a corresponding color, creating a one-of-a-kind visual fingerprint for each track.
+    </p>
 
     <h2>🛠 Features</h2>
     <ul>
@@ -74,14 +93,26 @@
       <li>No data collection — fully offline capable</li>
       <li>Generates a .png file of the visualization that can be used as a poster</li>
       <li>Perfect for gifts for music and science lovers alike</li>
+      <li>Supports a wide range of audio formats and sources</li>
+      <li>Easy-to-use interface with step-by-step instructions</li>
+      <li>Open source and customizable for advanced users</li>
     </ul>
+    <p>
+      Whether you want to create a unique piece of art, analyze the structure of your favorite songs, or simply have fun exploring the intersection of music and color, AlbumViz has you covered.
+    </p>
 
     <h2>📦 Download</h2>
+    <p>
+      AlbumViz is available as a free and open-source project. You can download the latest version directly from GitHub. The application is lightweight and runs on most modern computers without the need for an internet connection.
+    </p>
     <p>
       <a class="btn" href="https://github.com/camnoval/audioVisualizer/archive/refs/heads/main.zip" target="_blank">⬇️ Download ZIP from GitHub</a>
     </p>
 
     <h2>💻 GitHub Repository</h2>
+    <p>
+      Want to see how it works under the hood or contribute to the project? Check out the source code on GitHub. Contributions, bug reports, and feature requests are always welcome!
+    </p>
     <p>
       <a href="https://github.com/camnoval/audioVisualizer" target="_blank">
         View Source Code on GitHub →
@@ -100,19 +131,39 @@
         </ul>
       </li>
       <li>Visualize and save the output .png file!</li>
+      <li>Note: If you are getting errors and the video isn't loading even when you use a URL, you'll likely have to update yt-dlp. Go into the terminal and type "pip install yt-dlp --upgrade" </li>
+      <li>Also, it takes a minute to load the video after initially hitting search, especially if it's a URL. You may need to be patient, even if it's not responsive for ~ 2 minutes.</li>
     </ul>
+    <p>
+      The application is designed to be user-friendly, with clear prompts and helpful error messages. Even if you’re new to audio analysis or programming, you’ll find it easy to get started. For advanced users, the codebase is well-documented and modular, making it simple to add new features or customize the visualization process.
+    </p>
 
     <h2>🖼 Demo</h2>
-    <p>Here’s what the user interface looks like:</p>
+    <p>
+      Curious about what AlbumViz can do? Here’s what the user interface looks like, along with a sample visualization generated from a popular album. Notice how the colors shift smoothly, reflecting the changing frequencies throughout the song.
+    </p>
     <img class="screenshot" src="demo/screenshot.png" alt="Visualization screenshot" style="max-width:400px; width:100%; height:auto; border-radius:6px; margin-top:0.5rem;">
-
+    <p>
+      Each visualization is unique to the audio input, making it a perfect gift or conversation piece for music and science enthusiasts.
+    </p>
     <p style="margin-top:1rem;">
       <a href="examples.html" class="btn">See examples of the work</a>
     </p>
 
     <h2>🔒 Privacy</h2>
     <p>
-      This tool runs completely offline. It does not collect, transmit, or store any data.
+      Your privacy is important. AlbumViz runs completely offline and does not collect, transmit, or store any data. All processing is done locally on your device, ensuring that your music and personal information remain secure and private.
+    </p>
+    <p>
+      This makes AlbumViz ideal for use in classrooms, studios, and at home, without worrying about data privacy or internet connectivity.
+    </p>
+
+    <h2>🌟 Get Involved</h2>
+    <p>
+      AlbumViz is an open-source project, and we welcome contributions from the community. If you have ideas for new features, want to help improve the code, or simply want to share your visualizations, join us on GitHub! Together, we can make music more colorful for everyone.
+    </p>
+    <p>
+      For questions, feedback, or support, feel free to reach out via the contact page or open an issue on GitHub.
     </p>
 
   </div>

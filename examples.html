@@ -1,10 +1,43 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AlbumViz - Examples</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .grid-item {
+      background: #161b22;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin: 0.5rem 0;
+    }
+
+    .grid-item h3 {
+      font-size: 1rem;
+      color: #58a6ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .grid-item p {
+      font-size: 0.9rem;
+      color: #c9d1d9;
+    }
+  </style>
 </head>
 <body>
 
@@ -19,34 +52,48 @@
     </nav>
   </header>
 
-<div class="container">
-  <h2>🎧 AlbumViz Examples</h2>
-  <p>These visualizations were generated using AlbumViz by analyzing full albums or long-form tracks. Each image represents a translation of the audio frequency spectrum into visible light wavelengths (400–700 nm).</p>
+  <div class="container">
+    <h2>🎧 AlbumViz Examples</h2>
+    <p>These visualizations were generated using AlbumViz by analyzing full albums or long-form tracks. Each image represents a translation of the audio frequency spectrum into visible light wavelengths (400–700 nm).</p>
 
-  <h3>Pink Floyd - Dark Side of the Moon</h3>
-  <p>A classic progressive rock album with sweeping dynamic shifts and spacious mixes. The gradients of color reflect transitions from calm to chaos and back again.</p>
-  <img class="screenshot" src="demo/darkSideOfTheMoon.png" alt="Pink Floyd visualization">
+    <div class="grid">
+      <div class="grid-item">
+        <h3>Pink Floyd – Dark Side of the Moon</h3>
+        <img src="demo/darkSideOfTheMoon.png" alt="Pink Floyd visualization">
+        <p>A classic progressive rock album with sweeping dynamic shifts and spacious mixes. The gradients of color reflect transitions from calm to chaos and back again.</p>
+      </div>
 
-  <h3>Daft Punk - Random Access Memories</h3>
-  <p>This electronic album features rhythmic synths and crisp production. Notice the consistent color pulses, reflecting steady mid-to-high frequency content.</p>
-  <img class="screenshot" src="demo/ram.png" alt="Daft Punk visualization">
+      <div class="grid-item">
+        <h3>Daft Punk – Random Access Memories</h3>
+        <img src="demo/ram.png" alt="Daft Punk visualization">
+        <p>This electronic album features rhythmic synths and crisp production. Notice the consistent color pulses, reflecting steady mid-to-high frequency content.</p>
+      </div>
 
-  <h3>Kendrick Lamar - To Pimp a Butterfly</h3>
-  <p>This hip-hop album mixes jazz, funk, and lyrical complexity. The strong midrange and low-end rhythms create a warm, earth-toned visual with bursts of bright highlights.</p>
-  <img class="screenshot" src="demo/kendrick.png" alt="Kendrick Lamar visualization">
+      <div class="grid-item">
+        <h3>Kendrick Lamar – To Pimp a Butterfly</h3>
+        <img src="demo/kendrick.png" alt="Kendrick Lamar visualization">
+        <p>This hip-hop album mixes jazz, funk, and lyrical complexity. Strong midrange and low-end rhythms create a warm, earth-toned visual with bright highlights.</p>
+      </div>
 
-  <h3>Radiohead - OK Computer</h3>
-  <p>Radiohead’s sonic layering and ambient textures are visible in the blurred, wave-like color transitions. Expect frequent shifts between mellow and distorted segments.</p>
-  <img class="screenshot" src="demo/okcomputer.png" alt="Radiohead visualization">
+      <div class="grid-item">
+        <h3>Radiohead – OK Computer</h3>
+        <img src="demo/okcomputer.png" alt="Radiohead visualization">
+        <p>Radiohead’s ambient textures and dynamic guitar tones produce wave-like transitions of color that reflect the shifting emotional tone.</p>
+      </div>
 
-  <h3>Billie Eilish - When We All Fall Asleep, Where Do We Go?</h3>
-  <p>This minimalist pop album is rich in sub-bass and whisper-like vocals. The visualization leans toward darker hues with occasional piercing high-end accents.</p>
-  <img class="screenshot" src="demo/billie.png" alt="Billie Eilish visualization">
+      <div class="grid-item">
+        <h3>Billie Eilish – When We All Fall Asleep, Where Do We Go?</h3>
+        <img src="demo/billie.png" alt="Billie Eilish visualization">
+        <p>This minimalist pop album features deep sub-bass and whispery highs, leading to darker visuals with occasional high-frequency color spikes.</p>
+      </div>
 
-  <h3>Hans Zimmer - Inception (Original Soundtrack)</h3>
-  <p>Zimmer's cinematic score features deep, resonant brass and bass. Long wavelengths dominate, creating visualizations heavy on reds and oranges.</p>
-  <img class="screenshot" src="demo/inception.png" alt="Hans Zimmer visualization">
-</div>
+      <div class="grid-item">
+        <h3>Hans Zimmer – Inception (Original Soundtrack)</h3>
+        <img src="demo/inception.png" alt="Hans Zimmer visualization">
+        <p>Zimmer’s cinematic score uses deep, resonant brass and bass, represented visually with bold reds and long low-frequency bands.</p>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

@@ -24,6 +24,7 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="privacy.html">Privacy</a>
+      <a href="tos.html">Terms</a>
     </nav>
   </header>
 
@@ -119,4 +120,25 @@
   </footer>
 
 </body>
+
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #161b22; color: #fff; padding: 1rem; font-size: 0.9rem; text-align: center; z-index: 1000;">
+  This site uses cookies from Google to deliver its services and show relevant ads. 
+  By using AlbumViz, you agree to our 
+  <a href="privacy.html" style="color: #58a6ff; text-decoration: underline;">Privacy Policy</a>.
+  <button id="accept-cookies" style="margin-left: 1rem; padding: 0.3rem 0.8rem; border: none; border-radius: 4px; background: #58a6ff; color: #000; cursor: pointer;">Accept</button>
+</div>
+
+<script>
+  document.getElementById('accept-cookies').addEventListener('click', function() {
+    document.getElementById('cookie-banner').style.display = 'none';
+    localStorage.setItem('cookiesAccepted', 'true');
+  });
+
+  if (localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
+
 </html>

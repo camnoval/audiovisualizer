@@ -17,26 +17,60 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="privacy.html">Privacy</a>
+      <a href="tos.html">Terms</a>
     </nav>
   </header>
 
   <div class="container">
-    <h2>Contact Us</h2>
+    <h2>Contact AlbumViz</h2>
     <p>
-      Have questions, feedback, or want to request a custom print?
-      We’d love to hear from you.
+      We’d love to hear from you! Whether you have questions about how AlbumViz works, suggestions for new features, or would like to request a custom visualization poster, feel free to reach out.
     </p>
+
+    <h3>Email</h3>
     <p>
-      📧 Email: <a href="mailto:cameronnoval@gmail.com">cameronnoval@gmail.com</a>
+      📬 <a href="mailto:cameronnoval@gmail.com">cameronnoval@gmail.com</a>
     </p>
+
+    <h3>Location</h3>
     <p>
-      📍 Location: United States
+      AlbumViz is based in the United States. While we primarily operate online, we welcome inquiries from users worldwide.
     </p>
+
+    <h3>Support & Feedback</h3>
     <p>
-      You can also explore the project or open an issue on 
-      <a href="https://github.com/camnoval/audioVisualizer" target="_blank" rel="noopener">GitHub</a>.
+      - For technical issues or bugs, you can also open an issue on our 
+      <a href="https://github.com/camnoval/audioVisualizer" target="_blank" rel="noopener">GitHub repository</a>.<br>
+      - For general questions, collaborations, or poster requests, email is the best way to get in touch.
+    </p>
+
+    <h3>Data & Privacy</h3>
+    <p>
+      AlbumViz does not require account registration and does not collect personal data through this contact page. 
+      Any information you send us via email will only be used to respond to your inquiry. 
+      For more details, see our <a href="privacy.html">Privacy Policy</a>.
     </p>
   </div>
 
 </body>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #161b22; color: #fff; padding: 1rem; font-size: 0.9rem; text-align: center; z-index: 1000;">
+  This site uses cookies from Google to deliver its services and show relevant ads. 
+  By using AlbumViz, you agree to our 
+  <a href="privacy.html" style="color: #58a6ff; text-decoration: underline;">Privacy Policy</a>.
+  <button id="accept-cookies" style="margin-left: 1rem; padding: 0.3rem 0.8rem; border: none; border-radius: 4px; background: #58a6ff; color: #000; cursor: pointer;">Accept</button>
+</div>
+
+<script>
+  document.getElementById('accept-cookies').addEventListener('click', function() {
+    document.getElementById('cookie-banner').style.display = 'none';
+    localStorage.setItem('cookiesAccepted', 'true');
+  });
+
+  if (localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
+
 </html>

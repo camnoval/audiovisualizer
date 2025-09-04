@@ -17,38 +17,78 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="privacy.html">Privacy</a>
+      <a href="tos.html">Terms</a>
     </nav>
   </header>
 
   <div class="container">
     <h2>About AlbumViz</h2>
     <p>
-      AlbumViz is a creative visualization tool that transforms music into art. By mapping audio
-      frequencies to colors, AlbumViz creates posters, gradients, and digital artwork that allow
-      you to <strong>see your music</strong>.
+      AlbumViz is a creative visualization project that transforms music into stunning works of digital art. 
+      Using real-time frequency analysis and color-mapping techniques, AlbumViz makes sound visible by translating audio frequencies into colors, patterns, and textures.
     </p>
+
+    <h3>Our Mission</h3>
     <p>
-      The algorithm uses a logarithmic frequency-to-color mapping inspired by how humans perceive
-      both sound and light. Low frequencies shift toward warmer colors, while higher frequencies
-      are represented by cooler tones, producing a natural and immersive translation of sound.
+      The mission of AlbumViz is to bridge the worlds of art, science, and technology. 
+      By blending the physics of sound and light with modern visualization techniques, we aim to create tools that are both entertaining and educational.
     </p>
+
+    <h3>How It Works</h3>
     <p>
-      AlbumViz was originally developed by <strong>Cameron Noval</strong> as a blend of physics,
-      art, and coding. Today it serves as both an art gallery and a tool for musicians, educators,
-      and fans who want to experience music in a new way.
+      AlbumViz applies a logarithmic frequency-to-color mapping inspired by how humans perceive sound and light. 
+      Low frequencies are mapped to deeper tones, while higher frequencies are mapped to brighter, more energetic colors. 
+      This process results in unique visual signatures for each track or album, making every visualization one-of-a-kind.
     </p>
+
+    <h3>Who We Serve</h3>
     <p>
-      We believe strongly in privacy — AlbumViz runs locally on your computer. Your music is never
-      uploaded or shared. If you request a poster, only the final artwork (not your songs) is used
-      to create the print.
+      - <strong>Music Fans:</strong> Discover new ways to experience your favorite albums visually.<br>
+      - <strong>Artists & Musicians:</strong> Generate unique artwork that represents your sound.<br>
+      - <strong>Educators:</strong> Use visualizations to explain frequency, sound perception, and wave physics in an engaging way.<br>
+      - <strong>Collectors:</strong> Request high-quality poster prints of visualizations for display.
     </p>
+
+    <h3>Background</h3>
     <p>
-      To learn more, visit the 
-      <a href="https://github.com/camnoval/audioVisualizer" target="_blank" rel="noopener">
-        AlbumViz GitHub repository
-      </a>.
+      AlbumViz was created by <strong>Cameron Noval</strong> as an exploration of digital art and computational creativity. 
+      What started as a small side project has grown into a platform that blends programming, design, and music into something fresh and exciting.
+    </p>
+
+    <h3>Open Source Roots</h3>
+    <p>
+      The underlying code for AlbumViz began as an open-source project. While the website now focuses on showcasing completed works and offering poster prints, 
+      those interested in contributing or learning from the project can explore the original repository on 
+      <a href="https://github.com/camnoval/audioVisualizer" target="_blank" rel="noopener">GitHub</a>.
+    </p>
+
+    <h3>Contact & Support</h3>
+    <p>
+      Questions, feedback, or collaboration ideas? Visit our <a href="contact.html">Contact page</a> to reach out.  
+      We welcome input from musicians, educators, artists, and fans worldwide.
     </p>
   </div>
 
 </body>
+
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #161b22; color: #fff; padding: 1rem; font-size: 0.9rem; text-align: center; z-index: 1000;">
+  This site uses cookies from Google to deliver its services and show relevant ads. 
+  By using AlbumViz, you agree to our 
+  <a href="privacy.html" style="color: #58a6ff; text-decoration: underline;">Privacy Policy</a>.
+  <button id="accept-cookies" style="margin-left: 1rem; padding: 0.3rem 0.8rem; border: none; border-radius: 4px; background: #58a6ff; color: #000; cursor: pointer;">Accept</button>
+</div>
+
+<script>
+  document.getElementById('accept-cookies').addEventListener('click', function() {
+    document.getElementById('cookie-banner').style.display = 'none';
+    localStorage.setItem('cookiesAccepted', 'true');
+  });
+
+  if (localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
+
 </html>
